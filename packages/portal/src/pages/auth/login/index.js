@@ -45,7 +45,7 @@ class LoginPage extends React.Component {
     const { username, password } = this.state
     const { APP_NAME } = process.env
     const backgroundImage = {
-      backgroundImage: `url(${hero})`,
+      // backgroundImage: `url(${hero})`,
     }
     return (
       <Wrapper>

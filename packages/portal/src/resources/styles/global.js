@@ -9,6 +9,7 @@ import RobotoThin from '../fonts/Roboto-Thin-webfont.woff'
 import JuiceLight from '../fonts/JUICE_Light-webfont.woff'
 import JuiceRegular from '../fonts/JUICE_Regular-webfont.woff'
 import JuiceBold from '../fonts/JUICE_Bold-webfont.woff'
+import { appBg } from 'resources/styles/helpers'
 
 const GlobalStyles = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -126,10 +127,8 @@ const GlobalStyles = createGlobalStyle`
     font-size: 18px;
     overflow: hidden;
     font-weight: 300;
-    background: ${({ theme }) =>
-      `linear-gradient(12deg, ${lighten(0.15, theme.primary)} 10%, ${
-        theme.primary
-      } 90%);`};
+    /* background: ${({ theme }) => `linear-gradient(12deg, ${lighten(0.15, theme.primary)} 10%, ${theme.primary} 90%);`}; */
+  ${appBg()}
     color: ${({ theme }) => theme.text.dark}
   }
 

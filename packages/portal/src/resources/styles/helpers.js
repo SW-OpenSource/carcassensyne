@@ -1,4 +1,4 @@
-import { theme as t } from 'resources/styles/theme'
+import * as carcassonne from 'resources/images/carcassonne'
 
 const pageContainer = theme => `
   background-color: ${theme.primary};
@@ -9,4 +9,10 @@ const pageContainer = theme => `
   padding: 0 1vw;
 `
 
-export { pageContainer }
+const appBg = () => `
+  background: url(${carcassonne.city1});
+  background-position: bottom left;
+  background-repeat: no-repeat
+`
+
+export { pageContainer, appBg }

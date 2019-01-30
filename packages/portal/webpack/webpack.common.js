@@ -14,7 +14,7 @@ export default {
   mode: NODE_ENV,
   target: 'web',
   entry: isDev
-    ? ['@babel/polyfill', path.resolve(PATHS.src, 'index.js')]
+    ? ['react-hot-loader/patch', '@babel/polyfill', path.resolve(PATHS.src, 'index.js')]
     : ['@babel/polyfill', path.resolve(PATHS.src, 'index.js')],
   output: {
     path: path.resolve(PATHS.dist),
