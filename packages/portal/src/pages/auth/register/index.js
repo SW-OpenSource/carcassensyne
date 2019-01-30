@@ -11,7 +11,7 @@ import { AuthQueries } from 'gql'
 import { getErrorField } from 'utils/errors'
 import AVATARS from 'resources/images/avatars'
 import hero from 'resources/images/hero.svg'
-import logo from 'resources/images/logo/icon-152x152.png'
+import logo from 'resources/images/logo.jpg'
 import Wrapper from './wrapper'
 import validation, { isFormValid } from './validation'
 

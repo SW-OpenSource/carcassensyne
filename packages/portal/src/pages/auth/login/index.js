@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button'
 import { Auth } from 'utils'
 import { AuthQueries } from 'gql'
 import hero from 'resources/images/hero.svg'
-import logo from 'resources/images/logo/icon-152x152.png'
+import logo from 'resources/images/logo.jpg'
 import Wrapper from './wrapper'
 
 class LoginPage extends React.Component {
@@ -26,8 +26,7 @@ class LoginPage extends React.Component {
     }
   }
 
-  handleOnChange = event =>
-    this.setState({ [event.target.name]: event.target.value })
+  handleOnChange = event => this.setState({ [event.target.name]: event.target.value })
 
   handleOnLogin = () => {
     const { username, password } = this.state
@@ -90,11 +89,7 @@ class LoginPage extends React.Component {
           <Button onClick={this.navigateToRegister} variant="outlined">
             Register
           </Button>
-          <Button
-            onClick={() => this.handleOnLogin()}
-            variant="contained"
-            color="primary"
-          >
+          <Button onClick={() => this.handleOnLogin()} variant="contained" color="primary">
             Login
           </Button>
         </div>
