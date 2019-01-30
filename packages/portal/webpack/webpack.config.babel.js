@@ -3,6 +3,8 @@ import common from './webpack.common'
 import { env, copy, html, hot, clean } from './webpack.plugins'
 import { js, image, font, html as htmlloader } from './webpack.loaders'
 
+require('dotenv').config()
+
 const isDev = process.env.NODE_ENV === 'development'
 
 const config = {
