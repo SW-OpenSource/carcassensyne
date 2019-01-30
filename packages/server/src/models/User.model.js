@@ -30,6 +30,13 @@ const UserSchema = new Schema({
       autopopulate: true,
     },
   ],
+  participations: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Player',
+      autopopulate: true,
+    },
+  ],
   createdAt: String,
   updatedAt: String,
 })

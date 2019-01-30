@@ -21,6 +21,10 @@ const UserQueries = {
                 }
                 expansions
               }
+              participations {
+                score,
+                color,
+              }
               createdAt
               updatedAt
               scope

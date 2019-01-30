@@ -4,7 +4,7 @@ const { Schema } = mongoose
 
 const PlayerSchema = new Schema({
   score: Number,
-  userId: {
+  user: {
     type: Schema.Types.ObjectId,
     ref: 'User',
     autopopulate: true,

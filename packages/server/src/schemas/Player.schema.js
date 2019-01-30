@@ -3,7 +3,7 @@ const Player = `
     _id: ID!
     score: Int!
     color: String!
-    userId: User!
+    user: User!
     createdAt: String
   }
 `

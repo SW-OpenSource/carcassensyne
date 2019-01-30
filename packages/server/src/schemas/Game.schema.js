@@ -14,12 +14,14 @@ const GameQueries = `
 
 const GameMutations = `
   addGame(
-    players: [Player!]!
+    players: [ID!]!
+    expansions: [String!]!
   ): Game!
 
   updateGame(
     _id: ID!
-    players: [Player!]!
+    players: [ID!]!
+    expansions: [String!]!
   ): Game!
   
   deleteGame(

@@ -8,6 +8,7 @@ const User = `
     scope: [String]
     avatar: String!
     games: [Game]
+    participations: [Player]
     createdAt: String!
     updatedAt: String
   }
@@ -52,7 +53,8 @@ const UserMutations = `
     username: String
     scope: [String]
     avatar: String
-    games: [Game]
+    games: [ID]
+    participations: [ID]
     createdAt: String
     updatedAt: String
   ): User!
