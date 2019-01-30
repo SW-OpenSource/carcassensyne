@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LabelAndText Should render a Text element 1`] = `
+.c1 {
+  color: #333;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.c2 {
+  color: #333;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.c0 > p:first-of-type {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+<div
+  className="c0"
+>
+  <p
+    className="c1"
+    color="#333"
+  >
+    Hello World!
+  </p>
+  <p
+    className="c2"
+    color="#333"
+  >
+    <span
+      aria-label="Hello World!"
+      role="img"
+    >
+      🙌
+    </span>
+  </p>
+</div>
+`;
