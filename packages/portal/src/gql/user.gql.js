@@ -13,43 +13,13 @@ const UserQueries = {
               email
               username
               avatar
-              lists {
-                _id
-                title
-                icon
-                creator {
-                  _id
-                  username
-                  forename
-                }
-                items {
-                  _id
-                  title
-                  icon
-                  creator {
-                    _id
+              games {
+                players {
+                  user {
                     username
-                    forename
                   }
-                  tags {
-                    _id
-                    title
-                    color
-                    creator {
-                      _id
-                      username
-                      forename
-                    }
-                    createdAt
-                    updatedAt
-                  }
-                  note
-                  done
-                  createdAt
-                  updatedAt
                 }
-                createdAt
-                updatedAt
+                expansions
               }
               createdAt
               updatedAt
