@@ -1,4 +1,4 @@
 **/node_modules
 **/dist
 **/.env
-packages/server/nodemon.json
+/packages/server/nodemon.json
