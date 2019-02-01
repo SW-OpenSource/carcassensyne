@@ -60,8 +60,7 @@ class Navbar extends Component {
     }
   }
 
-  toggleMenu = () =>
-    this.setState(prevState => ({ burgerOpen: !prevState.burgerOpen }))
+  toggleMenu = () => this.setState(prevState => ({ burgerOpen: !prevState.burgerOpen }))
 
   navigateAway = page => {
     const { history } = this.props
@@ -80,9 +79,9 @@ class Navbar extends Component {
     return (
       <Wrapper>
         <div className="brand">
-          <h1>LA</h1>
+          <h1>CarcasSensyne</h1>
         </div>
-        <div className="navigation">
+        {/* <div className="navigation">
           {navLinks.map(link => (
             <IconButton
               key={link.path}
@@ -95,22 +94,13 @@ class Navbar extends Component {
               {link.icon}
             </IconButton>
           ))}
-        </div>
+        </div> */}
         <div className="burger">
-          <IconButton
-            aria-label="burger menu"
-            onClick={() => this.toggleMenu()}
-            disableRipple
-          >
+          <IconButton aria-label="burger menu" onClick={() => this.toggleMenu()} disableRipple>
             <MenuIcon />
           </IconButton>
         </div>
-        <BurgerMenu
-          open={burgerOpen}
-          toggleMenu={this.toggleMenu}
-          navigateAway={this.navigateAway}
-          history={history}
-        />
+        <BurgerMenu open={burgerOpen} toggleMenu={this.toggleMenu} navigateAway={this.navigateAway} history={history} />
       </Wrapper>
     )
   }

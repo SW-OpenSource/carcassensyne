@@ -52,6 +52,9 @@ const Wrapper = styled.div`
     }
     .avatar {
       margin-right: 14px;
+      & > div {
+        cursor: pointer;
+      }
       .avatar-image {
         width: 50px;
       }

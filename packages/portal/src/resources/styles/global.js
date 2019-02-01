@@ -126,10 +126,6 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Roboto', Arial;
     font-size: 18px;
     overflow: hidden;
-    font-weight: 300;
-    /* background: ${({ theme }) => `linear-gradient(12deg, ${lighten(0.15, theme.primary)} 10%, ${theme.primary} 90%);`}; */
-  ${appBg()}
-    color: ${({ theme }) => theme.text.dark}
   }
 
   img {
@@ -139,18 +135,20 @@ const GlobalStyles = createGlobalStyle`
 
   #app {
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    font-weight: 300;
+    ${appBg()}
+    color: ${({ theme }) => theme.text.dark};
   }
 
   .appContainer {
-    width: 100vw;
-    min-height: 100vh;
-    height: 100vh;
+    width: 100%;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     background-color: transparent;

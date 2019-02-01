@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '@material-ui/core/Button'
 import LogoutIcon from '@material-ui/icons/ExitToApp'
+import UserIcon from '@material-ui/icons/AccountBox'
 import WithAuth from 'components/withAuth'
 import { Auth } from 'utils'
 import Logo from 'resources/images/logo.jpg'
@@ -24,9 +25,9 @@ const BurgerMenu = props => {
         <img src={Logo} alt="List Awesome Logo" />
       </header>
       <main>
-        <Button color="primary" variant="outlined" onClick={() => navigateAway('error')}>
-          <LogoutIcon />
-          Error
+        <Button color="primary" variant="outlined" onClick={() => navigateAway('profile')}>
+          <UserIcon />
+          Profile
         </Button>
       </main>
       <footer>

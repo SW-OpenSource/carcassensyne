@@ -12,7 +12,7 @@ const MyLists = ({ lists }) => {
         </div>
         <div className="col2">
           <h1>Huston we have a problem!</h1>
-          <p>Try creating a list!!</p>
+          <p>No lists found!!</p>
         </div>
       </Wrapper>
     )

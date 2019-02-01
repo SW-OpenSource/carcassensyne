@@ -9,25 +9,21 @@ const Wrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   padding: 0;
-  background: ${({ theme }) =>
-    `linear-gradient(360deg, ${theme.primary} 25%, ${lighten(
-      0.15,
-      theme.primary,
-    )} 99%);`};
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  background: linear-gradient(to bottom, #3f4c6b, #606c88);
+  border-bottom-left-radius: 2.5px;
+  border-bottom-right-radius: 2.55px;
   overflow: hidden;
   .brand {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 50px;
-    padding: 7px 7px 0 5px;
+    /* width: 50px; */
+    padding: 7px 7px 0 12px;
     h1 {
       font-family: ${({ theme }) => theme.fontHeading};
       color: ${({ theme }) => theme.text.light};
-      font-size: 28px;
+      font-size: 20px;
       word-spacing: 10px;
       line-height: 1;
     }
@@ -44,9 +40,8 @@ const Wrapper = styled.div`
       transition: ${({ theme }) => theme.transition.fast};
       &.active {
         transition: ${({ theme }) => theme.transition.fast};
-        color: ${props => props.theme.primary};
-        background-color: #fff; /* ${({ theme }) => theme.text.light}; */
-        border-bottom: 2px solid ${({ theme }) => theme.text.light};
+        color: ${props => props.theme.text.dark};
+        background-color: ${({ theme }) => theme.text.light};
       }
       &:disabled {
         color: ${props => lighten(0.3, props.theme.grey)};
