@@ -2,6 +2,7 @@ import React from 'react'
 import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import { ThemeProvider } from 'styled-components'
+import { ToastContainer } from 'react-toastify'
 import { LoginPage, RegisterPage, ProfilePage, ErrorPage } from 'pages'
 import { theme, mui } from 'resources/styles/theme'
 import GlobalStyles from 'resources/styles/global'
@@ -15,6 +16,7 @@ const App = () => (
       <Router>
         <div className="appContainer">
           <GlobalStyles />
+          <ToastContainer />
           <Route path="**" component={Navbar} />
           <Switch>
             <Route exact path="/profile" component={ProfilePage} />
