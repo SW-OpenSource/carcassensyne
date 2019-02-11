@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
-import WithAuth from 'components/withAuth'
 import BurgerMenu from 'components/burger'
 import routes from './routes'
 import Wrapper from './wrapper'
@@ -76,6 +75,9 @@ class Navbar extends Component {
   render() {
     const { navLinks, burgerOpen } = this.state
     const { history } = this.props
+    if (!Auth.validateToken()) {
+      return null
+    }
     return (
       <Wrapper>
         <div className="brand">
@@ -114,4 +116,4 @@ Navbar.defaultProps = {
   history: {},
 }
 
-export default WithAuth(Navbar)
+export default Navbar

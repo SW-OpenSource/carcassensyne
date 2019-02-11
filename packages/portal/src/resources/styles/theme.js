@@ -37,6 +37,10 @@ const theme = {
   padding: {
     small: '12px 8px',
   },
+  font: {
+    light: colors.white,
+    dark: colors.black,
+  },
 }
 
 const mui = {

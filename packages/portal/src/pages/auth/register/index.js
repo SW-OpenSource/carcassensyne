@@ -10,7 +10,6 @@ import { Auth } from 'utils'
 import { AuthQueries } from 'gql'
 import { getErrorField } from 'utils/errors'
 import AVATARS from 'resources/images/avatars'
-import hero from 'resources/images/hero.svg'
 import logo from 'resources/images/logo.jpg'
 import Wrapper from './wrapper'
 import validation, { isFormValid } from './validation'
@@ -109,25 +108,14 @@ class RegisterPage extends React.Component {
 
   render() {
     const {
-      tempUser: {
-        forename,
-        surname,
-        username,
-        password,
-        confirm,
-        email,
-        avatar,
-      },
+      tempUser: { forename, surname, username, password, confirm, email, avatar },
     } = this.state
 
     const { validationObj } = this.state
     const { APP_NAME } = process.env
-    const backgroundImage = {
-      backgroundImage: `url(${hero})`,
-    }
     return (
       <Wrapper>
-        <div className="header" style={backgroundImage}>
+        <div className="header">
           <img src={logo} alt={`${APP_NAME} logo`} />
           <h1>{APP_NAME}</h1>
         </div>
@@ -174,11 +162,7 @@ class RegisterPage extends React.Component {
               </MenuItem>
               {AVATARS.map(avatar => (
                 <MenuItem key={avatar.name} value={avatar.name}>
-                  <StyledAvatar
-                    src={avatar.image}
-                    alt={avatar.name}
-                    className="avatar-image"
-                  />
+                  <StyledAvatar src={avatar.image} alt={avatar.name} className="avatar-image" />
                 </MenuItem>
               ))}
             </StyledSelect>
@@ -230,15 +214,11 @@ class RegisterPage extends React.Component {
             fullWidth
           />
         </Card>
-        <div className="actions" style={backgroundImage}>
+        <div className="actions">
           <Button onClick={this.handleOnCancel} variant="outlined">
             Cancel
           </Button>
-          <Button
-            onClick={this.handleOnSubmit}
-            color="primary"
-            variant="contained"
-          >
+          <Button onClick={this.handleOnSubmit} color="primary" variant="contained">
             Register
           </Button>
         </div>

@@ -25,6 +25,7 @@ const Wrapper = styled.div`
     h1 {
       margin: 34px auto;
       font-family: ${({ theme }) => theme.fontHeading};
+      color: ${({ theme }) => theme.font.light};
       font-size: 10vw;
       text-align: center;
       text-transform: uppercase;

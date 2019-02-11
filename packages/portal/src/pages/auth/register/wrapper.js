@@ -11,9 +11,6 @@ const Wrapper = styled.div`
   .header {
     width: 100%;
     height: 100px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 0 12px;
     display: flex;
     justify-content: flex-start;
@@ -24,7 +21,8 @@ const Wrapper = styled.div`
     }
     h1 {
       font-family: ${({ theme }) => theme.fontHeading};
-      font-size: 8.5vw;
+      color: ${({ theme }) => theme.font.light};
+      font-size: 8vw;
       line-height: 1;
       text-transform: uppercase;
       font-weight: bold;
@@ -67,9 +65,6 @@ const Wrapper = styled.div`
     width: 100%;
     display: flex;
     padding: 12px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     button {
       width: 47.5%;
       height: 45px;

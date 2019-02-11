@@ -5,8 +5,7 @@ const Auth = {
   // IS
   isToken: () => typeof localStorage.getItem(CONSTS.TOKEN) === 'string',
   // GET
-  getToken: () =>
-    Auth.isToken() ? localStorage.getItem(CONSTS.TOKEN) : undefined,
+  getToken: () => (Auth.isToken() ? localStorage.getItem(CONSTS.TOKEN) : undefined),
   getIdFromToken: () => decode(Auth.getToken())._id,
   // SET
   setToken: token => {

@@ -12,11 +12,9 @@ const WithAuth = WrappedComponent => props => {
       location: { pathname },
     },
   } = props
-  if (!pathname.includes('/login') && !pathname.includes('/register')) {
-    setTimeout(() => {
-      history.push('/login')
-    }, 100)
-  }
+
+  history.push('/login')
+
   return <div />
 }
 

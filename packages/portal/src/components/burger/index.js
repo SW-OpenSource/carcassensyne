@@ -2,7 +2,6 @@ import React from 'react'
 import Button from '@material-ui/core/Button'
 import LogoutIcon from '@material-ui/icons/ExitToApp'
 import UserIcon from '@material-ui/icons/AccountBox'
-import WithAuth from 'components/withAuth'
 import { Auth } from 'utils'
 import Logo from 'resources/images/logo.jpg'
 import hero from 'resources/images/hero.svg'
@@ -12,6 +11,9 @@ const BurgerMenu = props => {
   const { open, toggleMenu, navigateAway, history } = props
   const backgroundImage = {
     backgroundImage: `url(${hero})`,
+  }
+  if (!Auth.validateToken()) {
+    return null
   }
   return (
     <Drawer
@@ -40,4 +42,4 @@ const BurgerMenu = props => {
   )
 }
 
-export default WithAuth(BurgerMenu)
+export default BurgerMenu
