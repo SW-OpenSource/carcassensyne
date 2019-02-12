@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { lighten } from 'polished'
+import { lighten, rgba } from 'polished'
 
 const Wrapper = styled.div`
   width: 100vw;
@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   padding: 0;
-  background: linear-gradient(to bottom, #3f4c6b, #606c88);
+  background: linear-gradient(to bottom, ${rgba('#f1f1f1', 0.5)}, ${rgba('#fff', 0.8)});
   border-bottom-left-radius: 2.5px;
   border-bottom-right-radius: 2.55px;
   overflow: hidden;
@@ -22,7 +22,7 @@ const Wrapper = styled.div`
     padding: 7px 7px 0 12px;
     h1 {
       font-family: ${({ theme }) => theme.fontHeading};
-      color: ${({ theme }) => theme.text.light};
+      color: ${({ theme }) => theme.text.dark};
       font-size: 20px;
       word-spacing: 10px;
       line-height: 1;
@@ -36,12 +36,12 @@ const Wrapper = styled.div`
     button {
       height: 50px;
       border-radius: 0;
-      color: ${({ theme }) => theme.text.light};
+      color: ${({ theme }) => theme.text.dark};
       transition: ${({ theme }) => theme.transition.fast};
       &.active {
         transition: ${({ theme }) => theme.transition.fast};
         color: ${props => props.theme.text.dark};
-        background-color: ${({ theme }) => theme.text.light};
+        background-color: ${({ theme }) => theme.text.dark};
       }
       &:disabled {
         color: ${props => lighten(0.3, props.theme.grey)};
@@ -52,7 +52,7 @@ const Wrapper = styled.div`
   .burger {
     margin-left: auto;
     button {
-      color: ${({ theme }) => theme.text.light};
+      color: ${({ theme }) => theme.text.dark};
     }
   }
 `

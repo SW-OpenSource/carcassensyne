@@ -2,7 +2,6 @@ import { rgba } from 'polished'
 import * as carcassonne from 'resources/images/carcassonne'
 
 const pageContainer = () => `
-  background: linear-gradient(to bottom, ${rgba('#3f4c6b', 0.9)}, ${rgba('#606c88', 0.9)});
   width: 98%;
   height: calc(98% - 50px);
   overflow-x: hidden;

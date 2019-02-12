@@ -35,7 +35,10 @@ class LoginPage extends React.Component {
       .catch(err => console.error(err))
       .then(response => {
         Auth.handleLogin(response, history)
-        toast('Login Successful')
+        toast.success('Login Successful', {
+          position: toast.POSITION.BOTTOM_CENTER,
+          autoClose: 3500,
+        })
       })
   }
 

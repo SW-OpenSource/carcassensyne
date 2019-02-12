@@ -63,13 +63,15 @@ class Navbar extends Component {
 
   navigateAway = page => {
     const { history } = this.props
-    this.setState(
-      prevState => ({ burgerOpen: !prevState.burgerOpen }),
-      () => {
-        history.push(`/${page}`)
-        this.updateLinksState()
-      },
-    )
+    if (!history.location.pathname.includes(page)) {
+      this.setState(
+        prevState => ({ burgerOpen: !prevState.burgerOpen }),
+        () => {
+          history.push(`/${page}`)
+          this.updateLinksState()
+        },
+      )
+    }
   }
 
   render() {

@@ -10,6 +10,7 @@ const Drawer = styled(SwipeableDrawer)`
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+
     & > * {
       width: 100%;
     }
@@ -29,12 +30,17 @@ const Drawer = styled(SwipeableDrawer)`
   main {
     padding: 24px 12px;
     button {
+      height: 45px;
+      &:not(:first-of-type) {
+        margin-top: 12px;
+      }
     }
   }
   footer {
     margin-top: auto;
     padding: 12px;
     button {
+      height: 45px;
     }
   }
   main,
