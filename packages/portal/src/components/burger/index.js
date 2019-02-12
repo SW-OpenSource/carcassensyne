@@ -33,7 +33,14 @@ const BurgerMenu = props => {
         </Button>
       </main>
       <footer>
-        <Button color="secondary" variant="outlined" onClick={() => Auth.handleLogout(history)}>
+        <Button
+          color="secondary"
+          variant="outlined"
+          onClick={() => {
+            toggleMenu()
+            Auth.handleLogout(history)
+          }}
+        >
           <LogoutIcon />
           Logout
         </Button>
