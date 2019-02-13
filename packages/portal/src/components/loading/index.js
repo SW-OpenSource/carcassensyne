@@ -22,11 +22,11 @@ Loading.propTypes = {
 }
 
 Loading.defaultProps = {
-  size: 28,
-  color1: 'rgb(66, 165, 245)',
-  color2: 'rgb(239, 83, 80)',
-  color3: 'rgb(253, 216, 53)',
-  color4: 'rgb(76, 175, 80)',
+  size: 45,
+  color1: '#3498db',
+  color2: '#e74c3c',
+  color3: '#f1c40f',
+  color4: '#2ecc71',
 }
 
 /*
