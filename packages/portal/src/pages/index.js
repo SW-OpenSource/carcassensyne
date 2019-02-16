@@ -1,5 +1,5 @@
 export { LoginPage } from './auth/login'
 export { RegisterPage } from './auth/register'
 export { ProfilePage } from './profile'
-export { NewGamePage } from './game'
+export { GamePage } from './game'
 export { ErrorPage } from './error'

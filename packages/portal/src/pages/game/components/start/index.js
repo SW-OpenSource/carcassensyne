@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 import Button from '@material-ui/core/Button'
 import NewGameIcon from '@material-ui/icons/Games'
 import RecordResultIcon from '@material-ui/icons/NoteAdd'
@@ -20,6 +21,11 @@ class StartGame extends PureComponent {
       </Wrapper>
     )
   }
+}
+
+StartGame.propTypes = {
+  startNewGame: PropTypes.func.isRequired,
+  recordGameResults: PropTypes.func.isRequired,
 }
 
 export { StartGame }

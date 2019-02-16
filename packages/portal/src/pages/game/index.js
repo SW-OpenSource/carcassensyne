@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import Loading from 'components/loading'
 import WithAuth from 'components/withAuth'
 import { UserQueries } from 'gql'
-import { StartGame } from './components'
+import { StartGame, NewGame, RecordResults } from './components'
 import Wrapper from './wrapper'
 
-class NewGame extends Component {
+class Game extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -41,11 +41,16 @@ class NewGame extends Component {
   }
 
   render() {
-    const { user } = this.state
+    const { user, isNewGame, isRecordResults } = this.state
     if (user === undefined) {
       return <Loading />
     }
-
+    if (isNewGame) {
+      return <NewGame />
+    }
+    if (isRecordResults) {
+      return <RecordResults />
+    }
     return (
       <Wrapper>
         <StartGame startNewGame={this.startNewGame} recordGameResults={this.recordGameResults} />
@@ -54,10 +59,10 @@ class NewGame extends Component {
   }
 }
 
-NewGame.propTypes = {}
+Game.propTypes = {}
 
-NewGame.defaultProps = {}
+Game.defaultProps = {}
 
-const NewGamePage = WithAuth(NewGame)
+const GamePage = WithAuth(Game)
 
-export { NewGamePage }
+export { GamePage }
