@@ -35,9 +35,9 @@ class LoginPage extends React.Component {
       .catch(err => console.error(err))
       .then(response => {
         Auth.handleLogin(response, history)
-        toast.success('Login Successful', {
+        toast.success(`Welcome back ${username}`, {
           position: toast.POSITION.BOTTOM_CENTER,
-          autoClose: 3500,
+          autoClose: 2000,
         })
       })
   }
@@ -50,12 +50,9 @@ class LoginPage extends React.Component {
   render() {
     const { username, password } = this.state
     const { APP_NAME } = process.env
-    const backgroundImage = {
-      // backgroundImage: `url(${hero})`,
-    }
     return (
       <Wrapper>
-        <div className="header" style={backgroundImage}>
+        <div className="header">
           <img src={logo} alt={`${APP_NAME} logo`} />
           <h1>{APP_NAME}</h1>
         </div>
@@ -91,7 +88,7 @@ class LoginPage extends React.Component {
             }}
           />
         </Card>
-        <div className="actions" style={backgroundImage}>
+        <div className="actions">
           <Button onClick={this.navigateToRegister} variant="outlined">
             Register
           </Button>

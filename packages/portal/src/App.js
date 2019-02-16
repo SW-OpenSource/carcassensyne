@@ -3,7 +3,7 @@ import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import { ThemeProvider } from 'styled-components'
 import { ToastContainer } from 'react-toastify'
-import { LoginPage, RegisterPage, ProfilePage, ErrorPage, ScoreSheetPage } from 'pages'
+import { LoginPage, RegisterPage, ProfilePage, ErrorPage, NewGamePage } from 'pages'
 import { theme, mui } from 'resources/styles/theme'
 import GlobalStyles from 'resources/styles/global'
 import Navbar from 'components/navbar'
@@ -20,7 +20,7 @@ const App = () => (
           <Route path="**" component={Navbar} />
           <Switch>
             <Route exact path="/profile" component={ProfilePage} />
-            <Route exact path="/score-sheet" component={ScoreSheetPage} />
+            <Route exact path="/new-game" component={NewGamePage} />
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/register" component={RegisterPage} />
             <Route exact path="/" render={() => <Redirect to="/profile" />} />

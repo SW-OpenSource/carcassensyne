@@ -20,8 +20,11 @@ const Wrapper = styled.div`
   .col2 {
     h1 {
       color: ${({ theme }) => theme.primary};
-      font-size: 1.25rem;
+      font-size: 1.125rem;
       font-weight: 400;
+    }
+    p {
+      font-size: 0.9rem;
     }
   }
 `

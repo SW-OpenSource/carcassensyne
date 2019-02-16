@@ -2,18 +2,24 @@ import React, { Component } from 'react'
 import Loading from 'components/loading'
 import WithAuth from 'components/withAuth'
 import { UserQueries } from 'gql'
-import { Badge, MyHistory } from './components'
+import { StartGame } from './components'
 import Wrapper from './wrapper'
 
-class Profile extends Component {
+class NewGame extends Component {
   constructor(props) {
     super(props)
     this.state = {
       user: undefined,
+      isNewGame: false,
+      isRecordResults: false,
     }
   }
 
   componentDidMount() {
+    this.loadUser()
+  }
+
+  loadUser = () => {
     const { user } = this.state
     if (user === undefined) {
       UserQueries.me()
@@ -22,7 +28,17 @@ class Profile extends Component {
     }
   }
 
-  loadUser = () => {}
+  startNewGame = () => {
+    this.setState(prevState => ({
+      isNewGame: !prevState.isNewGame,
+    }))
+  }
+
+  recordGameResults = () => {
+    this.setState(prevState => ({
+      isRecordResults: !prevState.isRecordResults,
+    }))
+  }
 
   render() {
     const { user } = this.state
@@ -32,17 +48,16 @@ class Profile extends Component {
 
     return (
       <Wrapper>
-        <Badge user={user} />
-        <MyHistory games={user.games} />
+        <StartGame startNewGame={this.startNewGame} recordGameResults={this.recordGameResults} />
       </Wrapper>
     )
   }
 }
 
-Profile.propTypes = {}
+NewGame.propTypes = {}
 
-Profile.defaultProps = {}
+NewGame.defaultProps = {}
 
-const ProfilePage = WithAuth(Profile)
+const NewGamePage = WithAuth(NewGame)
 
-export { ProfilePage }
+export { NewGamePage }

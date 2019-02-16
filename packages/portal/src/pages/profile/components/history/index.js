@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { getIconByName } from 'resources/images/icons/index'
 import Wrapper from './wrapper'
 
-const MyLists = ({ lists }) => {
-  if (lists.length === 0) {
+const MyHistory = ({ games }) => {
+  if (games.length === 0) {
     return (
       <Wrapper>
         <div className="col1">
@@ -12,7 +12,7 @@ const MyLists = ({ lists }) => {
         </div>
         <div className="col2">
           <h1>Huston we have a problem!</h1>
-          <p>No lists found!!</p>
+          <p>No games found!!</p>
         </div>
       </Wrapper>
     )
@@ -24,12 +24,12 @@ const MyLists = ({ lists }) => {
   )
 }
 
-MyLists.propTypes = {
-  lists: PropTypes.arrayOf(PropTypes.shape({})),
+MyHistory.propTypes = {
+  games: PropTypes.arrayOf(PropTypes.shape({})),
 }
 
-MyLists.defaultProps = {
-  lists: [],
+MyHistory.defaultProps = {
+  games: [],
 }
 
-export { MyLists }
+export { MyHistory }

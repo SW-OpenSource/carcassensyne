@@ -2,7 +2,7 @@ import React from 'react'
 import Button from '@material-ui/core/Button'
 import LogoutIcon from '@material-ui/icons/ExitToApp'
 import UserIcon from '@material-ui/icons/AccountBox'
-import ScoreSheetIcon from '@material-ui/icons/Receipt'
+import NewGameIcon from '@material-ui/icons/VideogameAsset'
 import { Auth } from 'utils'
 import Logo from 'resources/images/logo.jpg'
 import hero from 'resources/images/hero.svg'
@@ -40,11 +40,11 @@ const BurgerMenu = props => {
         <Button
           color="primary"
           variant="outlined"
-          onClick={() => navigateAway('score-sheet')}
-          disabled={history.location.pathname.includes('score-sheet')}
+          onClick={() => navigateAway('new-game')}
+          disabled={history.location.pathname.includes('new-game')}
         >
-          <ScoreSheetIcon />
-          Score Sheet
+          <NewGameIcon />
+          New Game
         </Button>
       </main>
       <footer>
