@@ -26,7 +26,7 @@
     "graphql": "^14.1.1",
     "handlebars": "^4.0.12",
     "jsonwebtoken": "^8.4.0",
-    "mongoose": "^5.4.5",
+    "mongoose": "^5.7.5",
     "mongoose-autopopulate": "^0.9.1",
     "nodemailer": "^5.1.1"
   },
